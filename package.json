@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Vicolondon/hapi-crud/issues"
   },
-  "homepage": "https://github.com/Vicolondon/hapi-crud#readme"
+  "homepage": "https://github.com/Vicolondon/hapi-crud#readme",
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0"
+  }
 }
