@@ -1,0 +1,23 @@
+{
+  "name": "hapi-crud",
+  "version": "1.0.0",
+  "description": "Test of Hapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vicolondon/hapi-crud.git"
+  },
+  "keywords": [
+    "Hapi",
+    "CRUD"
+  ],
+  "author": "Vico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vicolondon/hapi-crud/issues"
+  },
+  "homepage": "https://github.com/Vicolondon/hapi-crud#readme"
+}
