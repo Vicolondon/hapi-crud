@@ -1,8 +1,13 @@
 'use strict';
 
 const Hapi = require('@hapi/hapi');
+const Mongoose = require("mongoose");
+const Joi = require("joi");
+
 
 const init = async () => {
+    // Connection to MongoDB
+    Mongoose.connect("mongodb://127.0.0.1:27017/test");
 
     const server = Hapi.server({
         port: 3000,
@@ -10,13 +15,41 @@ const init = async () => {
     });
 
     server.route({
-        method: 'GET',
-        path: '/',
-        handler: (request, h) => {
-
-            return 'Hello World!';
-        }
+        method: "POST",
+        path: "/person",
+        options: {
+            validate: {}
+        },
+        handler: async (request, h) => {}
     });
+    
+    server.route({
+        method: "GET",
+        path: "/people",
+        handler: async (request, h) => {}
+    });
+    
+    server.route({
+        method: "GET",
+        path: "/person/{id}",
+        handler: async (request, h) => {}
+    });
+    
+    server.route({
+        method: "PUT",
+        path: "/person/{id}",
+        options: {
+            validate: {}
+        },
+        handler: async (request, h) => {}
+    });
+    
+    server.route({
+        method: "DELETE",
+        path: "/person/{id}",
+        handler: async (request, h) => {}
+    });
+    
 
     await server.start();
     console.log('Server running on %s', server.info.uri);
